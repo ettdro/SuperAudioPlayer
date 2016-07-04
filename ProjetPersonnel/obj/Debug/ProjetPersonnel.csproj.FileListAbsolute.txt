@@ -1,0 +1,8 @@
+c:\users\proprietaire\documents\visual studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\obj\Debug\ProjetPersonnel.Form1.resources
+c:\users\proprietaire\documents\visual studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\obj\Debug\ProjetPersonnel.csproj.GenerateResource.Cache
+C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\bin\Debug\SuperAudioPlayer.exe.config
+C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\bin\Debug\SuperAudioPlayer.exe
+C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\bin\Debug\SuperAudioPlayer.pdb
+C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\obj\Debug\SuperAudioPlayer.Properties.Resources.resources
+C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\obj\Debug\SuperAudioPlayer.exe
+C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\obj\Debug\SuperAudioPlayer.pdb
