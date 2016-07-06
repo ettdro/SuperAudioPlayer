@@ -53,7 +53,7 @@
             // 
             // button_FileDialog
             // 
-            this.button_FileDialog.Location = new System.Drawing.Point(386, 28);
+            this.button_FileDialog.Location = new System.Drawing.Point(387, 20);
             this.button_FileDialog.Name = "button_FileDialog";
             this.button_FileDialog.Size = new System.Drawing.Size(75, 23);
             this.button_FileDialog.TabIndex = 0;
@@ -63,8 +63,9 @@
             // 
             // textBox_Path
             // 
-            this.textBox_Path.Location = new System.Drawing.Point(12, 30);
+            this.textBox_Path.Location = new System.Drawing.Point(13, 23);
             this.textBox_Path.Name = "textBox_Path";
+            this.textBox_Path.ReadOnly = true;
             this.textBox_Path.Size = new System.Drawing.Size(368, 20);
             this.textBox_Path.TabIndex = 1;
             // 
@@ -72,18 +73,20 @@
             // 
             this.music_list.Alignment = System.Windows.Forms.ListViewAlignment.Left;
             this.music_list.GridLines = true;
-            this.music_list.Location = new System.Drawing.Point(13, 56);
+            this.music_list.Location = new System.Drawing.Point(13, 48);
             this.music_list.Margin = new System.Windows.Forms.Padding(0);
+            this.music_list.MultiSelect = false;
             this.music_list.Name = "music_list";
-            this.music_list.Size = new System.Drawing.Size(283, 427);
+            this.music_list.Size = new System.Drawing.Size(283, 435);
             this.music_list.TabIndex = 2;
             this.music_list.UseCompatibleStateImageBehavior = false;
             this.music_list.View = System.Windows.Forms.View.List;
+            this.music_list.ColumnWidthChanging += new System.Windows.Forms.ColumnWidthChangingEventHandler(this.music_list_ColumnWidthChanging);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 11);
+            this.label1.Location = new System.Drawing.Point(12, 7);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 3;
@@ -107,6 +110,7 @@
             this.previous_button.TabIndex = 5;
             this.previous_button.Text = "««";
             this.previous_button.UseVisualStyleBackColor = true;
+            this.previous_button.Click += new System.EventHandler(this.previous_button_Click);
             // 
             // next_button
             // 
@@ -178,9 +182,10 @@
             // label_current_song
             // 
             this.label_current_song.AutoSize = true;
+            this.label_current_song.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_current_song.Location = new System.Drawing.Point(462, 207);
             this.label_current_song.Name = "label_current_song";
-            this.label_current_song.Size = new System.Drawing.Size(52, 13);
+            this.label_current_song.Size = new System.Drawing.Size(61, 13);
             this.label_current_song.TabIndex = 13;
             this.label_current_song.Text = "En cours:";
             // 
