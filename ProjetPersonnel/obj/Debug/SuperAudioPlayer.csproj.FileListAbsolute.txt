@@ -7,4 +7,5 @@ C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\Proj
 C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\obj\Debug\SuperAudioPlayer.pdb
 C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\obj\Debug\SuperAudioPlayer.Form1.resources
 C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\bin\Debug\NAudio.dll
+C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\obj\Debug\SuperAudioPlayer.ConvertForm.resources
 C:\Users\Proprietaire\Documents\Visual Studio 2015\Projects\ProjetPersonnel\ProjetPersonnel\obj\Debug\SuperAudioPlayer.csprojResolveAssemblyReference.cache

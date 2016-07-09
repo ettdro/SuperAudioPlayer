@@ -1,4 +1,7 @@
 Things to do:
 
-- Merge SoundPlayer for the NAudio library
-	Reason: More possible manipulations with NAudio.
+- Converter from MP3 to WAV.
+- Play next song when the current song has been completed.
+- Repair volume bar.
+- Show current time of song on the left label of the progress bar.
+- The progress bar itself.
