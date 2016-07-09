@@ -391,13 +391,5 @@ namespace SuperAudioPlayer
             ConvertForm convertForm = new ConvertForm();
             convertForm.Show();
         }
-
-        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        {
-            if (player.PlaybackState == PlaybackState.Stopped)
-            {
-                next_button_Click(sender, e);
-            }
-        }
     }
 }
