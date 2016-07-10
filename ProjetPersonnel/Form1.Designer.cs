@@ -298,10 +298,6 @@
             this.aIFFToWAVToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.aIFFToWAVToolStripMenuItem.Text = "AIFF to WAV";
             // 
-            // backgroundWorker2
-            // 
-            this.backgroundWorker2.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker2_DoWork);
-            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(778, 566);
