@@ -54,14 +54,13 @@
             this.menu_bar = new System.Windows.Forms.ToolStripMenuItem();
             this.mP3ToWAVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aIFFToWAVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.backgroundWorker2 = new System.ComponentModel.BackgroundWorker();
             ((System.ComponentModel.ISupportInitialize)(this.volume_bar)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // button_FileDialog
             // 
-            this.button_FileDialog.Location = new System.Drawing.Point(383, 60);
+            this.button_FileDialog.Location = new System.Drawing.Point(383, 51);
             this.button_FileDialog.Name = "button_FileDialog";
             this.button_FileDialog.Size = new System.Drawing.Size(79, 20);
             this.button_FileDialog.TabIndex = 0;
@@ -71,7 +70,7 @@
             // 
             // textBox_Path
             // 
-            this.textBox_Path.Location = new System.Drawing.Point(9, 60);
+            this.textBox_Path.Location = new System.Drawing.Point(9, 51);
             this.textBox_Path.Name = "textBox_Path";
             this.textBox_Path.ReadOnly = true;
             this.textBox_Path.Size = new System.Drawing.Size(368, 20);
@@ -96,7 +95,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 44);
+            this.label1.Location = new System.Drawing.Point(6, 35);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(120, 13);
             this.label1.TabIndex = 3;
@@ -165,9 +164,9 @@
             this.label_time_beginning.AutoSize = true;
             this.label_time_beginning.Location = new System.Drawing.Point(278, 322);
             this.label_time_beginning.Name = "label_time_beginning";
-            this.label_time_beginning.Size = new System.Drawing.Size(28, 13);
+            this.label_time_beginning.Size = new System.Drawing.Size(34, 13);
             this.label_time_beginning.TabIndex = 10;
-            this.label_time_beginning.Text = "0:00";
+            this.label_time_beginning.Text = "00:00";
             // 
             // label_time_end
             // 
@@ -180,6 +179,7 @@
             // 
             // backgroundWorker1
             // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
             this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
             this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
             // 
@@ -325,7 +325,6 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.volume_bar)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -362,7 +361,6 @@
         private System.Windows.Forms.ToolStripMenuItem menu_bar;
         private System.Windows.Forms.ToolStripMenuItem mP3ToWAVToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aIFFToWAVToolStripMenuItem;
-        private System.ComponentModel.BackgroundWorker backgroundWorker2;
     }
 }
 

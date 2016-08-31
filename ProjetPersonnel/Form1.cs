@@ -53,7 +53,7 @@ namespace SuperAudioPlayer
 
         
         /// <summary>
-        /// Gets the time length of one song.
+        /// Gets the time length of one song to insert in the database. Use getSongLength in the Database class to get a song length.
         /// </summary>
         /// <param name="fullPath">The full path of the song file.</param>
         /// <returns>String of the song time length.</returns>
@@ -121,7 +121,6 @@ namespace SuperAudioPlayer
 
             return new Tuple<string, string, string>(totalHoursString, totalMinutesString, totalSecondsString);
         }
-        
 
         private void PlaySong(string fullPath)
         {
@@ -137,6 +136,7 @@ namespace SuperAudioPlayer
             {
                 player.Init(waveChannel);
                 player.Play();
+                backgroundWorker1.RunWorkerAsync();
             }
             
             if (player.PlaybackState == PlaybackState.Paused)
@@ -149,7 +149,7 @@ namespace SuperAudioPlayer
             Tuple<string, string, string> songLength = CheckTime(0, musicTimeLength.Item1, musicTimeLength.Item2);
 
             label_time_end.Text = songLength.Item2 + ":" + songLength.Item3;
-            label_song_playing.Text = music_list.SelectedItems[0].Text;
+            label_song_playing.Text = database.getSongTitle(fullPath);
             currentSongPath = fullPath;
         }
 
@@ -255,22 +255,48 @@ namespace SuperAudioPlayer
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private int minutes = 0;
+        private int seconds = 0;
+
+        private Tuple<int,int> getCurrentTime()
         {
-            backgroundWorker1.RunWorkerAsync();
+            seconds++;
+
+            if (seconds < 59)
+            {
+            } else
+            {
+                minutes++;
+                seconds = 0;
+            }
+
+            return new Tuple<int, int>(minutes,seconds);
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
-
+            for (int i = 1; i <= 100; i++)
+            {
+                // Wait 100 milliseconds.
+                Thread.Sleep(1000);
+                // Report progress.
+                backgroundWorker1.ReportProgress(i);
+            }
         }
 
+        int i = 0;
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
+            i++;
+            WaveStream mainOutputStream = new WaveFileReader(currentSongPath);
+            WaveChannel32 waveChannel = new WaveChannel32(mainOutputStream);
+
+            Tuple<int,int> currentTime = getCurrentTime();
+            Tuple<string,string,string> currentTimeStr = CheckTime(0, currentTime.Item1, currentTime.Item2);
+            label_time_beginning.Text = currentTimeStr.Item2 + ":" + currentTimeStr.Item3;
+
             // Change the value of the ProgressBar to the BackgroundWorker progress.
             music_bar.Value = e.ProgressPercentage;
-            // Set the text.
-            label_time_beginning.Text = e.ProgressPercentage.ToString();
         }
 
         /// <summary>
